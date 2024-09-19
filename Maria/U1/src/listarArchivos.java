@@ -65,11 +65,16 @@ public class listarArchivos {
                     nuevoFichero.createNewFile();
                     System.out.println("El fichero se ha creado correctamente." + saltoDeLinea);
                     // Tiene que estar aqui dentro para que que aparezcan los nuevos cambios
+
                 } else {
                     System.out.println("El fichero no se ha podido crear, porque ya existe.");
                     System.out.println(saltoDeLinea);
                 }
+
                 File [] listaArchivosSub = nuevoDirectorio.listFiles();
+                // Hay que actualizar los archivos dentro del directorio principal
+                listaArchivos = directorioMaria.listFiles();
+
                 System.out.println("Nombres de los ficheros dentro del directorio: ");
                 for (File archivo : listaArchivos) {
                     System.out.println(archivo);
