@@ -65,21 +65,21 @@ public class listarArchivos {
                     nuevoFichero.createNewFile();
                     System.out.println("El fichero se ha creado correctamente." + saltoDeLinea);
                     // Tiene que estar aqui dentro para que que aparezcan los nuevos cambios
-                    File [] listaArchivosSub = nuevoDirectorio.listFiles();
-                    System.out.println("Nombres de los ficheros dentro del directorio: ");
-                    for (File archivo : listaArchivos) {
-                        System.out.println(archivo);
-                    }
-                    System.out.println(saltoDeLinea);
-                    System.out.println("Nombres de los ficheros dentro del subdirectorio: ");
-                    for (File archivoSub : listaArchivosSub) {
-                        System.out.println(archivoSub);
-                    }
-                    System.out.println(saltoDeLinea);
                 } else {
                     System.out.println("El fichero no se ha podido crear, porque ya existe.");
                     System.out.println(saltoDeLinea);
                 }
+                File [] listaArchivosSub = nuevoDirectorio.listFiles();
+                System.out.println("Nombres de los ficheros dentro del directorio: ");
+                for (File archivo : listaArchivos) {
+                    System.out.println(archivo);
+                }
+                System.out.println(saltoDeLinea);
+                System.out.println("Nombres de los ficheros dentro del subdirectorio: ");
+                for (File archivoSub : listaArchivosSub) {
+                    System.out.println(archivoSub);
+                }
+                System.out.println(saltoDeLinea);
             } catch (IOException e) {
                 System.out.println("Fallo en la creación del fichero.");
             }
