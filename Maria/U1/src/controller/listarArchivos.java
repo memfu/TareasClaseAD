@@ -1,3 +1,5 @@
+package controller;
+
 import java.io.File;
 import java.io.IOException;
 
@@ -38,7 +40,7 @@ public class listarArchivos {
         File directorioMaria = new File ("/Users/maria/Desktop/UNIR DAM");
         File [] listaArchivos = directorioMaria.listFiles();
         for (File archivo : listaArchivos) {
-            System.out.println(archivo);
+            System.out.println(archivo.getName());
         }
         System.out.println(saltoDeLinea);
     /*
@@ -65,7 +67,6 @@ public class listarArchivos {
                     nuevoFichero.createNewFile();
                     System.out.println("El fichero se ha creado correctamente." + saltoDeLinea);
                     // Tiene que estar aqui dentro para que que aparezcan los nuevos cambios
-
                 } else {
                     System.out.println("El fichero no se ha podido crear, porque ya existe.");
                     System.out.println(saltoDeLinea);
@@ -77,12 +78,12 @@ public class listarArchivos {
 
                 System.out.println("Nombres de los ficheros dentro del directorio: ");
                 for (File archivo : listaArchivos) {
-                    System.out.println(archivo);
+                    System.out.println(archivo.getName());
                 }
                 System.out.println(saltoDeLinea);
                 System.out.println("Nombres de los ficheros dentro del subdirectorio: ");
                 for (File archivoSub : listaArchivosSub) {
-                    System.out.println(archivoSub);
+                    System.out.println(archivoSub.getName());
                 }
                 System.out.println(saltoDeLinea);
             } catch (IOException e) {
